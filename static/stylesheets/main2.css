@@ -1,0 +1,89 @@
+table {
+    margin-top: 20px;
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 20px;
+}
+
+th {
+    background-color: lightgray;
+}
+
+tr,th,td {
+    border: 1px solid black;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+
+.heading-content > h1 {
+    display: inline-block;
+    vertical-align: middle;
+    width:600px;
+    font-size: 3.5em;
+}
+
+.heading-content > div {
+    display: inline-block;
+    vertical-align: middle;
+    width: calc(100% - 606px);
+    text-align: right;
+}
+
+.heading-content > div > a {
+    display: inline;
+    min-width: 600px;
+    font-size: 2em;
+    text-decoration: none;
+    box-shadow: 0 0 0 1px rgba(0,0,0,.05),0 4px 6px 0 rgba(0,0,0,.1),0 8px 24px 0 rgba(0,0,0,.2);
+    padding: 10px;
+    border-radius: 20px;
+    color: black;
+}
+
+.heading-content > div > a:hover {
+   background-color: dodgerblue;
+   color: white;
+   font-weight: bold;
+   word-wrap: break-word;
+}
+
+.admin-dashboard {
+    box-shadow: 0 0 0 1px rgba(0,0,0,.05),0 4px 6px 0 rgba(0,0,0,.1),0 8px 24px 0 rgba(0,0,0,.2);
+    padding: 20px;
+    border-radius: 20px;
+    width: 70%;
+}
+
+.qty-area {
+    text-align: left;
+}
+
+.quantity-selector {
+    border: 1px solid black;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 16px;
+    cursor: default;
+}
+
+.quantity-selector:focus {
+    outline: none;
+}
+
+.quantity-option {
+    width: 0px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.quantity-option > button {
+        display: block;
+}
+

@@ -1,0 +1,31 @@
+<style>
+    .profiler-table {
+        border-collapse: collapse;
+        border-spacing: 0;
+        width: 100%;
+        padding: 1em;
+    }
+    .profiler-table td {
+        border: 1px solid #dddddd;
+        padding: 8px;
+        font-size: 1.5em;
+    }
+    .profiler-table tr:nth-child(even) {
+        background-color: #dddddd;
+    }
+</style>
+<% console.log(locals.partials) %> 
+<table class="profiler-table">
+    <tr>
+        <td>Url: <%= typeof locals.partials.url != "undefined" ? locals.partials.url : '' %> </td>
+    </tr>
+    <tr>
+        <td>Method: <%= typeof locals.partials.method != "undefined" ? locals.partials.method : '' %></td>
+    </tr>
+    <tr>
+        <td>Params: <%= typeof locals.partials.data != "undefined" ? locals.partials.data : '' %></td>
+    </tr>
+    <tr>
+        <td>Query: <%= typeof locals.partials.query != "undefined" ? locals.partials.query : '' %></td>
+    </tr>
+</table>

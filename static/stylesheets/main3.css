@@ -1,0 +1,181 @@
+/* ITEM DASHBOARD CSS AND PROFILE CSS */
+span {
+    font-weight: bold;
+}
+
+
+.item-dashboard {
+    box-shadow: 0 0 0 1px rgba(0,0,0,.05),0 4px 6px 0 rgba(0,0,0,.1),0 8px 24px 0 rgba(0,0,0,.2);
+    padding: 20px;
+    border-radius: 20px;
+    margin: 20px auto;
+    width: calc(100% - 500px);
+}
+
+.item-dashboard > p {
+    width: 500px;
+    font-size: 1.5em;
+    margin: 20px 0px
+}
+
+.review-container {
+    margin: 30px auto;
+    border-bottom: 1px solid lightgray;
+    padding-bottom: 20px;
+}
+  
+.review-container > form {
+    margin: 0px auto;
+}
+  
+.review-container > form > h3 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+  
+.post-area {
+    padding: 7px;
+    resize: none;
+    font-size: 20px;
+    border-radius: 15px;
+    width: 100%;
+}
+
+.post-area:focus {
+   outline: none;
+}
+  
+.btn-container {
+    text-align: right;
+}
+  
+.btn {
+    width: 170px;
+    text-transform: uppercase;
+    height: 40px;
+    font-size: 20px;
+    margin: 10px 0px;
+    border: none;
+    border-radius: 10px;
+    transition: transform 0.2s;
+    box-shadow: none;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+    color: white;
+}
+  
+.blue-btn {
+    background-color: lightblue;
+}
+
+.green-btn {
+    background-color: lightgreen;
+  }
+  
+.posted-section {
+    margin: 20px auto;
+}
+  
+.posted-section > h4 {
+    font-size: 25px;
+}
+  
+.posted-section > p {
+    font-size: 20px;
+    line-height: 30px;
+}
+  
+.comments-section > h5 {
+      font-size: 20px;
+}
+  
+.comments-section > p {
+      font-size: 18px;
+      line-height: 25px;
+}
+
+.comments-section {
+    width: 90%;
+    margin: 10px 0px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid lightgray;
+    float: right;
+}
+
+.comment-container {
+    margin: 20px auto;
+    padding-bottom: 20px;
+    border-bottom: 1px solid lightgray;
+}
+
+.comment-container > form {
+    text-align: right;
+}
+  
+.comment-post {
+      width: 90%;
+      padding: 7px;
+      resize: none;
+      font-size: 20px;
+      border-radius: 15px;
+}
+  
+
+/* PROFILE CSS */
+.profile {
+    box-shadow: 0 0 0 1px rgba(0,0,0,.05),0 4px 6px 0 rgba(0,0,0,.1),0 8px 24px 0 rgba(0,0,0,.2);
+    padding: 20px;
+    border-radius: 20px;
+    margin: 20px auto;
+    width: 70%;
+}
+
+.form-profile {
+    vertical-align: top;
+    display: inline-block;
+    width: 35%;
+    margin: 20px 60px;
+}
+
+.form-profile > fieldset {
+    padding: 7px;
+}
+
+.form-profile > fieldset > legend {
+   font-size: 1.5em;
+    margin-left: 10px;
+}
+
+.form-profile > fieldset > label, .form-profile >   fieldset > input {
+    display: block;
+    margin: 10px 20px;
+    font-size: 1.5em;
+    padding: 2px;
+}
+
+.form-profile > fieldset > div {
+    text-align: right;
+}
+
+.form-profile > fieldset > div > input[type="submit"] {
+    font-size: 20px;
+    width: 20%;
+}
+
+.review-content {
+    padding: .5em;
+}
+
+.owner-post {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.time-ago {
+    float: right;
+    vertical-align: middle;
+    text-align: right;
+}

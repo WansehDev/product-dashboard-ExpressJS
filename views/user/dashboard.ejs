@@ -1,0 +1,31 @@
+<%- include("../templates/header") %> 
+<%- include("../templates/navlogout", user) %> 
+
+--><div class="container dashboard">
+    <h2 class="title-container">All Products</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Inventory Count</th>
+                <th>Quantity Sold</th>
+            </tr>
+        </thead>
+        <tbody>
+        <% products.forEach(product => { %>
+            <tr>
+                <td><%= product.id %> </td>
+                <td><a href=<%- `/product/show/${product.id}` %> ><%= product.product_name %> </a></td>
+                <td><%= product.product_inventory %> </td>
+                <td><%= product.product_qty_sold %> </td>
+            </tr>
+        <% }) %>
+
+    </table>
+
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,17 @@
+
+# @Author: Lance Parantar
+
+# Database engines:
+DBEngine: "MySQL" # set here your preferred database engine (Ex. MySQl, PostgreSQL, MongoDB, etc)
+mysql:
+  # npm i mysql
+  host: localhost
+  user: root
+  password: "lance0113"
+  database: "merchandisedb"
+  port: 3306
+pg: 
+  # npm i pg-promise
+  # format: postgresql://(user):(password)@(host):(port)/(database name)
+  db: "postgresql://postgres:lance0113@localhost:5432/sampledb"
+

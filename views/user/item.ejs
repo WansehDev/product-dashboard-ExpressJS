@@ -1,0 +1,63 @@
+<%- include("../templates/header") %> 
+<%- include("../templates/navlogout", user) %> 
+
+<div class="container item-dashboard">
+    <h2 class="title-container"><%= product.product_name %> </h2>
+    <p>Added since: <span><%= product.created_at %> </span></p>
+    <p>Product ID: <span>#<%= product.id %> </span></p>
+    <p>Description: <span><%= product.product_description %> </span></p>
+    <p>Total sold: <span><%= product.product_qty_sold %> </span></p>
+    <p>Number of available stocks: <span><%= product.product_inventory %> </span></p>
+    
+    <!-- USER REVIEW -->
+    <div class="review-container">
+        <form action=<%- `/product/addReview/${product.id}` %> method="post">
+            <h3>Leave a Review</h3>
+            <textarea class="post-area" name="review" cols="84" rows="7" placeholder="Write a Review..."></textarea>
+            <div class="btn-container">
+                <input class="btn blue-btn" type="submit" value="post a view">
+            </div>
+        </form>
+    </div>
+<% if (reviews) { %>
+    <% reviews.forEach(review => { %>
+        <!-- POSTED REVIEWS -->
+        <div class="posted-section">
+            <h4 class="owner-post"><%= review.senderName %>  wrote:</h4>
+            <div class="time-ago">
+                <p><%= review.created_at %> </p>
+            </div>
+            <p class="review-content"><%= review.content %> </p>
+
+        <% comments.forEach(userComment => { %>
+            <% userComment.forEach(comment => { %>
+                <% if (comment !== null && comment.message_id == review.review_id) { %>
+                    <div class="comments-section">
+                        <h5 class="owner-post"><%= comment.senderName %>  wrote:</h5>
+                        <div class="time-ago">
+                            <p><%= comment.created_at %> </p>
+                        </div>
+                        <p><%= comment.content %> </p>
+                    </div>
+                <% } %>
+            <% }) %>
+        <% }) %>
+            <!-- USER COMMENT REVIEWS -->
+            <div class="comment-container">
+                <form action=<%- `/product/addComment/${product.id}` %> method="post">
+                    <textarea class="comment-post" name="reply" cols="83" rows="5" placeholder="Post a Comment..."></textarea>
+                    <input type="hidden" name="review_id" value=<%= review.review_id %> >
+                    <div class="btn-container">
+                        <input class="btn green-btn" type="submit" value="reply">
+                    </div>
+                </form>
+            </div>
+        </div>
+    <% }) %>
+ <% } %>
+</div>
+<script>
+</script>
+</body>
+
+</html>

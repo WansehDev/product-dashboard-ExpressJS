@@ -1,0 +1,53 @@
+<%- include("../templates/header") %> 
+<%- include("../templates/navlogout", user) %> 
+
+<div class="container profile">
+    <h2 class="title-container">Edit Profile</h2>
+    <div>
+        
+        <form class="form-profile" action="profile/Information" method="post">
+            <fieldset>
+                <legend>Edit Information</legend>
+
+                <label for="email">Email Address: </label>
+                <input type="email" name="email" value=<%= userInfo.email %>>
+
+                <label for="first_name">First Name: </label>
+                <input type="text" name="first_name" value=<%= userInfo.first_name %> >
+
+                <label for="last_name">Last Name: </label>
+                <input type="text" name="last_name" value=<%= userInfo.last_name %> >
+                <% if (success) { %>
+                    <p class="success">Profile Update success</p>
+                <% } %>
+                <div> 
+                    <input type="submit" value="Save">
+                </div>
+            </fieldset>
+            
+        </form>
+
+        <form class="form-profile" action="/profile/password" method="post">
+            <fieldset>
+                <legend>Change Password</legend>
+
+                <label for="old_password">Old Password: </label>
+                <input type="password" name="old_password">
+
+                <label for="new_password">New Password: </label>
+                <input type="password" name="new_password">
+
+                <label for="confirm_password" >Confirm Password: </label>
+                <input type="password" name="confirm_password">
+                <p class="success"></p>
+                <p class="error"></p>
+                <% if (success) { %>
+                    <p class="success">Profile Update success</p>
+                <% } %>
+                <div>
+                    <input type="submit" value="Save">
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</div>

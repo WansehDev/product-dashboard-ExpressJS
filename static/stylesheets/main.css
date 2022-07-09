@@ -1,0 +1,155 @@
+/* CSS RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    padding: 20px 30px;
+    background-color: white;
+    box-shadow: 0 0 0 1px rgba(0,0,0,.05),0 4px 6px 0 rgba(0,0,0,.1),0 8px 24px 0 rgba(0,0,0,.2);
+}
+
+nav > h1 {
+    display: inline-block;
+    vertical-align: middle;
+    width:400px;
+    font-size: 2.5em;
+}
+
+nav > ul {
+    width: calc(100% - 410px);
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.nav-item {
+    display: inline-block;
+    margin-right: 20px;
+    text-decoration: none;
+    transition: transform 0.2s;
+}
+
+.nav-item:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.nav-item > a {
+    color: black;
+    text-decoration: none;
+    font-size: 2em;
+}
+
+.nav-item > a:hover {
+    color: dodgerblue;
+}
+
+.account-area-logout {
+    display: inline-block;
+    width: calc(100% - 315px);
+    text-align: right;
+}
+
+.account-area-logout > a {
+    color: black;
+    font-size: 2em;
+    text-decoration: none;
+}
+
+.account-area-logout > a:hover{
+    color: dodgerblue;
+}
+
+.container > form > div > a {
+    margin-top: 10px;
+    display: block;
+}
+
+.title-container {
+    display: inline-block;
+    vertical-align: middle;
+    width:600px;
+    font-size: 3.5em;
+}
+
+
+.form-info > label, .form-info > input {
+    display: block;
+    margin: 10px 0px;
+    font-size: 1.5em;
+    padding: 2px;
+}
+
+.form-info > .choice-container {
+    width: 100%;
+    text-align: center;
+}
+
+.form-info > div > input[type=submit] {
+    margin-top: 10px;
+    font-size: 1.5em;
+    width: 50%;
+    border-radius: 10px;
+    border: none;
+    padding: 7px;
+    box-shadow: 0 0 0 1px rgba(0,0,0,.05),0 4px 6px 0 rgba(0,0,0,.1),0 8px 24px 0 rgba(0,0,0,.2);
+}
+
+.form-info> div > input[type=submit]:hover {
+    background-color: dodgerblue;
+    cursor: pointer;
+    color: white;
+}
+
+.account-area {
+    display: inline-block;
+    vertical-align: middle;
+    width: calc(100% - 450px);
+    text-align: right;
+}
+
+.account-area > p {
+    font-size: 2em;
+}
+
+.container {
+    width: 800px;
+    margin: 30px;
+}
+
+.login {
+    box-shadow: 0 0 0 1px rgba(0,0,0,.05),0 4px 6px 0 rgba(0,0,0,.1),0 8px 24px 0 rgba(0,0,0,.2);
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.container.login > h1 {
+    font-size: 2.5em;
+}
+
+.container.dashboard {
+    box-shadow: 0 0 0 1px rgba(0,0,0,.05),0 4px 6px 0 rgba(0,0,0,.1),0 8px 24px 0 rgba(0,0,0,.2);
+    padding: 20px;
+    border-radius: 20px;
+    width: calc(100% - 70px);
+}
+
+.error {
+    color:red;
+    text-align: left;
+}
+
+.success {
+    color:green;
+    text-align: left;
+}
+
