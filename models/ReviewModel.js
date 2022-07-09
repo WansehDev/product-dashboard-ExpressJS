@@ -4,8 +4,8 @@ class ReviewModel extends EXPRESS_MODEL {
   /*  
     DOCU: This function inserts new message from a user to the database.
   */
-  addReview(id, proudctID, content) {
-    return this.runQuery(
+  async addReview(id, proudctID, content) {
+    return await this.runQuery(
       "INSERT INTO messages (user_id, product_id, message) VALUES (?, ?, ?)",
       [id, proudctID, content]
     );

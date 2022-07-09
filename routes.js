@@ -13,14 +13,6 @@ Router.use(
   })
 );
 
-Router.use((req, res, next) => {
-  res.header("Cache-Control", "private, no-cache, no-store, must-revalidate");
-  res.header("Expires", "-1");
-  res.header("Pragma", "no-cache");
-
-  next();
-});
-
 /* USER LOGIN ROUTE */
 Router.get("/", UserController.indexPage);
 Router.post("/users/validate", UserController.validateLogin);

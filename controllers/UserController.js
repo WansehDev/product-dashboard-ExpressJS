@@ -11,7 +11,7 @@ const CommentModel = require("../models/CommentModel");
 const Validator = require("../system/utils/validator");
 const bcrypt = require("bcryptjs");
 const moment = require("moment");
-const e = require("express");
+
 
 const saltRounds = 10;
 
@@ -251,10 +251,14 @@ class UserController {
 
   // ITEM PAGE
   async itemPage(req, res) {
+    console.log("HERE")
     let productInfo = await ProductModel.getProductById(req.params.id);
+    console.log(productInfo);
+
+    let time = productInfo[0].created_at;
 
     // format date
-    productInfo[0].created_at = moment(productInfo[0].created_at).format(
+    productInfo[0].created_at = moment(time).format(
       "MMMM Do YYYY"
     );
 
@@ -273,7 +277,13 @@ class UserController {
       commentsForReviews.push(comments);
       review.created_at = moment(review.date).fromNow();
     }
-
+    console.log(req.session.userDetails)
+    // res.render("./user/item", {
+    //   user: req.session.userDetails,
+    //   product: productInfo[0],
+    //   reviews: reviews,
+    //   comments: commentsForReviews,
+    // });
     res.render("./user/item", {
       user: req.session.userDetails,
       product: productInfo[0],
@@ -284,6 +294,7 @@ class UserController {
 
   // This function add a product review
   async addReview(req, res) {
+    console.log("CLICKED")
     await ReviewModel.addReview(
       req.session.userDetails.id,
       req.params.id,

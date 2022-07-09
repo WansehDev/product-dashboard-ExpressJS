@@ -9,13 +9,7 @@ const app = Express();
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(Express.static(PATH.join(__dirname, "./static")));
-// app.use((req, res, next) => {
-//   if (typeof req.session.userDetails == "undefined") {
-//     res.redirect("/");
-//   } else {
-//     next();
-//   }
-// });
+
 
 app.set("views", __dirname + "/views");
 app.set("view engine", "ejs");
